@@ -1,6 +1,6 @@
 # Hadoop Practice Repository
 
-## Environments
+### Environments
 - OS - Ubuntu 18.04
 ### Installation
 1. Install OpenJDK
@@ -95,6 +95,7 @@ jps
 
 **I'll find how to configure the ports later**
 
+# List of works
 ## MapReduce
 ### Password Cracker
 - Decrypt md5 hashed password
