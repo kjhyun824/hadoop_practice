@@ -1,0 +1,34 @@
+# Add to .bashrc
+# Configuring Hadoop Related Environments
+
+#Hadoop Related Options
+export HADOOP_HOME=/home/hdoop/hadoop-3.2.1 <Hadoop Home Path>
+export HADOOP_INSTALL=$HADOOP_HOME
+export HADOOP_MAPRED_HOME=$HADOOP_HOME
+export HADOOP_COMMON_HOME=$HADOOP_HOME
+export HADOOP_HDFS_HOME=$HADOOP_HOME
+export YARN_HOME=$HADOOP_HOME
+export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
+export PATH=$PATH:$HADOOP_HOME/sbin:$HADOOP_HOME/bin
+export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib/nativ"
+
+# Add to $HADOOP_HOME/etc/hadoop/hadoop-env.sh
+# Setting Java for Hadoop
+export JAVA_HOME=/usr/lib/jvm/java-8-open-jdk-amd64 <Java Lib Path>
+
+# How to find your Java lib path
+1. $ which javac
+2. $ readlink -f <Result of upper command>
+
+# Format your HDFS Namenode
+- $ hdfs namenode -format
+
+# Start Hadoop Cluster
+- $ ./start-dfs.sh <Start HDFS>
+- $ ./start-yarn.sh <Start YARN>
+- $ jps <Check Running List>
+
+# Access Hadoop UI from Browser
+- Namenode Link : http://localhost:9870
+- Datanode Link : http://localhost:9864
+- YARN Resource Manager Link : http://localhost:8088
